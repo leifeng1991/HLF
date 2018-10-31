@@ -7,7 +7,7 @@ import com.hlf.base.module.constant.BaseConstans
  * Log输出工具类
  */
 object LogUtils {
-    private val isOpenLog = BaseConstans.isOpenLog
+    private const val isOpenLog = BaseConstans.isOpenLog
 
     fun v(messag: String) {
         if (isOpenLog)

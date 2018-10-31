@@ -18,12 +18,12 @@ import com.hlf.base.module.constant.BaseConstans
  */
 object ToastUtils {
     private var toast: Toast? = null
-    @Suppress("MayBeConstant")
-    private val isToastOpen = BaseConstans.isOpenToast
 
+    private const val isToastOpen = BaseConstans.isOpenToast
+
+    @SuppressLint("ShowToast")
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
     @JvmStatic
-    @SuppressLint("ShowToast")
     fun init(context: Context) {
         if (toast == null) {
             synchronized(ToastUtils::class.java) {
